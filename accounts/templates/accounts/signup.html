@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+{%block content%}
+
+{%if error %}
+{{error}}
+{%endif%}
+<br/>
+<br/>
+
+<h1>Sign Up</h1>
+<form method = "POST" action= "{%url 'signup'%}">
+
+{%csrf_token%}
+User Name:
+<br/>
+<input type = "text" name ="username"/>
+<br/>
+Password:
+<br/>
+<input type = "password" name ="password"/>
+<br/>
+Confirm Password:
+<br/>
+<input type = "password" name ="confirmpassword"/>
+<br/>
+<br/>
+<input class = "btn btn-primary" type = "submit" value = "Submit"/>
+
+</form>
+
+
+{%endblock%}
