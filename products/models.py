@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Products(models.Model):
-    hunter = models.ForeignKey(User, on_delete=models.CASCADE)
+    hunter = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=50)
     url = models.URLField(null=True, blank=True)
     pub_date = models.DateTimeField(null=True, blank=True)
